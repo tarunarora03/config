@@ -1,1 +1,13 @@
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+    #instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    prefer-ip-address: true
+  client:
+    service-url: 
+      defaultZone: http://192.168.0.117:8761/eureka/
+    healthcheck:
+      enabled: true
+
 msg: Hello World from config server
